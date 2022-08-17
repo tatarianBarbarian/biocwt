@@ -81,7 +81,8 @@ export default function Home() {
             <div className="pl-12">
               <Image
                 src={collage}
-                alt="collage"
+                alt=""
+                priority
               />
             </div>
           </div>
