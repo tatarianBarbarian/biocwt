@@ -17,15 +17,15 @@ export const OurWork = ({ className }) => {
       <Carousel className="mb-12">
         <Image
           src={int}
-          alt="test"
+          alt="Wooden kitchen interior"
         />
         <Image
           src={int2}
-          alt="test"
+          alt="Wooden dinner table"
         />
         <Image
           src={int3}
-          alt="test"
+          alt="Wooden dinner table 2"
         />
       </Carousel>
     </section>
