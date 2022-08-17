@@ -10,11 +10,11 @@ export default function Contact() {
       <Head>
         <title>Contact</title>
       </Head>
-      <main className="container my-32 flex justify-between">
-        <div className="flex flex-col">
+      <main className="container my-32 flex flex-col justify-between l:flex-row">
+        <div className="flex flex-col s:mb-10">
           <Heading
             as="h1"
-            className="mb-28"
+            className="mb-24 l:mb-28"
           >
             Contact
           </Heading>
