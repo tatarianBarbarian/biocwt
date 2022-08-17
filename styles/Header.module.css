@@ -1,0 +1,12 @@
+.nav-link {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 57px;
+}
+
+.nav-link:hover {
+  color: #a3b8d7;
+}
