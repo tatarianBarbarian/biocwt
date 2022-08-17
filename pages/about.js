@@ -9,7 +9,7 @@ export default function AboutPage() {
       <Head>
         <title>About</title>
       </Head>
-      <About className="mb-32" />
+      <About className="mb-32 mt-24 l:mt-32" />
       <main className="container">
         <OurWork />
         <QuestionsForm />
