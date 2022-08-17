@@ -29,6 +29,9 @@ export const QuestionsFormImpl = ({ className }, ref) => {
               .required('Phone is required'),
             question: Yup.string().required('What is your question?'),
           })}
+          onSubmit={() => {
+            alert('You did it! Good job. Seriously.')
+          }}
         >
           <Form>
             <Field
