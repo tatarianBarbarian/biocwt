@@ -43,7 +43,7 @@ export default function Home() {
         <ClientOnlyPortal selector="body">
           <Image
             src={WoodPic}
-            alt="wood picture"
+            alt=""
             style={{
               width: '60%',
               height: '100vh',
