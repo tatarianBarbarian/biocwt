@@ -55,6 +55,7 @@ export default function Home() {
               opacity: 0.6,
             }}
             tabIndex={-1}
+            priority
           />
         </ClientOnlyPortal>
         <NailedSection className="mb-20 l:mb-72">
