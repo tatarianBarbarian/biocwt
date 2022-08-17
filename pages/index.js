@@ -11,6 +11,7 @@ import { About } from 'components/sections/About'
 import { OurWork } from 'components/sections/OurWork'
 import { Heading } from 'components/Heading'
 import { Materials } from 'components/sections/Materials'
+import React from 'react'
 
 export async function getStaticProps() {
   return {
@@ -23,6 +24,8 @@ export async function getStaticProps() {
 }
 
 export default function Home() {
+  const qRef = React.useRef(null)
+
   return (
     <>
       <Head>
@@ -70,7 +73,13 @@ export default function Home() {
                 Oak, beech, ash from <br />{' '}
                 <span className="font-bold">1700 CZK</span> per m3
               </p>
-              <Button>Order</Button>
+              <Button
+                onClick={() =>
+                  qRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                Order
+              </Button>
             </div>
             <div className="pl-12">
               <Image
@@ -109,12 +118,22 @@ export default function Home() {
               </div>
             </div>
             <center className="mb-24 l:mb-72">
-              <Button className="mx-auto">Recieve consultation</Button>
+              <Button
+                className="mx-auto"
+                onClick={() =>
+                  qRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                Recieve consultation
+              </Button>
             </center>
           </section>
         </div>
         <About className="mb-20 l:mb-72" />
-        <QuestionsForm className="container" />
+        <QuestionsForm
+          className="container"
+          ref={qRef}
+        />
       </div>
     </>
   )

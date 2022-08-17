@@ -2,6 +2,7 @@ import { Field, Formik, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { Button } from 'components/Button'
 import { Heading } from 'components/Heading'
+import React from 'react'
 
 const ErrMessage = ({ name }) => (
   <ErrorMessage name={name}>
@@ -9,10 +10,11 @@ const ErrMessage = ({ name }) => (
   </ErrorMessage>
 )
 
-export const QuestionsForm = ({ className }) => {
+export const QuestionsFormImpl = ({ className }, ref) => {
   return (
     <div
       className={`${className} bg-right-bottom bg-no-repeat pb-40 l:bg-[url('/pic/stump.png')]`}
+      ref={ref}
     >
       <Heading className="mb-11 l:text-right">Any questions?</Heading>
       <div className="grid grid-cols-1 s:gap-y-11 l:grid-cols-2 l:gap-x-16">
@@ -65,3 +67,5 @@ export const QuestionsForm = ({ className }) => {
     </div>
   )
 }
+
+export const QuestionsForm = React.forwardRef(QuestionsFormImpl)
